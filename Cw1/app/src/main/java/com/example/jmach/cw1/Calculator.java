@@ -38,7 +38,6 @@ public class Calculator {
         for (int i : gradesArray) {
             sum += i;
         }
-
         Double average = sum/gradesArray.length;
         GradesActivity gradesActivity = new GradesActivity();
         gradesActivity.closeActivity(average);
