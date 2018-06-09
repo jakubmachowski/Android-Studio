@@ -1,0 +1,7 @@
+<resources>
+    <string name="mainActivityLabel">AndroidGui2</string>
+    <string name="name">Imię:</string>
+    <string name="surname">Nazwisko:</string>
+    <string name="gradesNumber">Liczba ocen:</string>
+    <string name="gradesActivityLabel">ListaOcen</string>
+</resources>

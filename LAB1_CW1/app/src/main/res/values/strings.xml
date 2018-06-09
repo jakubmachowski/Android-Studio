@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">LAB1_CW1</string>
+    <string name="imie">Imię</string>
+    <string name="nazwisko">Nazwisko</string>
+    <string name="liczba_ocen">Liczba ocen</string>
+</resources>
