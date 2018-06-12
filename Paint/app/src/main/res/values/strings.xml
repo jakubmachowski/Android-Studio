@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Paint</string>
+    <string name="kolor">Kolor</string>
+    <string name="rozmiar">Rozmiar</string>
 </resources>
