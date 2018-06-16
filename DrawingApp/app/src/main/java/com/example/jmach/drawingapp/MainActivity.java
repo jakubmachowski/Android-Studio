@@ -12,7 +12,6 @@ import android.view.MotionEvent;
 import android.view.View;
 
 public class MainActivity extends Activity {
-
     DrawingView dv ;
     private Paint mPaint;
 
@@ -32,34 +31,23 @@ public class MainActivity extends Activity {
     }
 
     public class DrawingView extends View {
-        public int width;
         public  int height;
         private Bitmap mBitmap;
         private Canvas mCanvas;
         private Path mPath;
-        private Paint   mBitmapPaint;
+        private Paint mBitmapPaint;
         Context context;
-        private Paint circlePaint;
-        private Path circlePath;
 
         public DrawingView(Context c) {
             super(c);
-            context=c;
+            context = c;
             mPath = new Path();
             mBitmapPaint = new Paint(Paint.DITHER_FLAG);
-            circlePaint = new Paint();
-            circlePath = new Path();
-            circlePaint.setAntiAlias(true);
-            circlePaint.setColor(Color.BLUE);
-            circlePaint.setStyle(Paint.Style.STROKE);
-            circlePaint.setStrokeJoin(Paint.Join.MITER);
-            circlePaint.setStrokeWidth(4f);
         }
 
         @Override
-        protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-            super.onSizeChanged(w, h, oldw, oldh);
-
+        protected void onSizeChanged(int w, int h, int old_w, int old_h) {
+            super.onSizeChanged(w, h, old_w, old_h);
             mBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
             mCanvas = new Canvas(mBitmap);
         }
@@ -67,10 +55,8 @@ public class MainActivity extends Activity {
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
-
             canvas.drawBitmap( mBitmap, 0, 0, mBitmapPaint);
             canvas.drawPath( mPath,  mPaint);
-            canvas.drawPath( circlePath,  circlePaint);
         }
 
         private float mX, mY;
@@ -90,18 +76,12 @@ public class MainActivity extends Activity {
                 mPath.quadTo(mX, mY, (x + mX)/2, (y + mY)/2);
                 mX = x;
                 mY = y;
-
-                circlePath.reset();
-                circlePath.addCircle(mX, mY, 30, Path.Direction.CW);
             }
         }
 
         private void touch_up() {
             mPath.lineTo(mX, mY);
-            circlePath.reset();
-            // commit the path to our offscreen
             mCanvas.drawPath(mPath,  mPaint);
-            // kill this so we don't double draw
             mPath.reset();
         }
 
