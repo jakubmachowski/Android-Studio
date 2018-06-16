@@ -39,7 +39,7 @@ public class Calculator {
             sum += i;
         }
         Double average = sum/gradesArray.length;
-        GradesActivity gradesActivity = new GradesActivity();
+        GradesActivity gradesActivity = (GradesActivity) context;
         gradesActivity.closeActivity(average);
     }
 }
