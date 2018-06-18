@@ -88,7 +88,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         } else if (view.getId() == R.id.new_btn) {
             AlertDialog.Builder newDialog = new AlertDialog.Builder(this);
             newDialog.setTitle("Nowy rysunek");
-            newDialog.setMessage("Chcesz rozpocząć nowy rysunek? Spowoduje to usunięcie bierzącego.");
+            newDialog.setMessage("Chcesz rozpocząć nowy rysunek? Spowoduje to usunięcie bieżącego.");
             newDialog.setPositiveButton("Tak", new DialogInterface.OnClickListener(){
                 public void onClick(DialogInterface dialog, int which){
                     drawView.startNew();
