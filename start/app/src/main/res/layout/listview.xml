@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/OcenaTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textViewSingle"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_height="45dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text="" />-->
+
+                <RadioGroup
+                    android:id="@+id/RadioGrupTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:layout_editor_absoluteY="5dp">
+
+                        <TextView
+                            android:id="@+id/textViewOceny2ac"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignBaseline="@+id/radioButton"
+                            android:gravity="center"
+                            android:text="@string/przedmiot"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/textViewOcenyLiczba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignBaseline="@+id/radioButton"
+                            android:gravity="center"
+                            android:text="@string/jeden"
+                            android:textSize="20dp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="5" />
+                </RadioGroup>
+        </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dziennik Ocen</string>
+    <string name="hello_android">Hello Android!</string>
+    <string name="przedmiot">Ocena</string>
+    <string name="app_name2">Oceny Lista</string>
+    <string name="jeden"></string>
+</resources>
