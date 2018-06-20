@@ -18,7 +18,7 @@ public class DrawingView extends View {
     private int paintColor = 0xFF660000;
     private Canvas drawCanvas;
     private Bitmap canvasBitmap;
-    private float brushSize, lastBrushSize;
+    private float brushSize;
 
     public DrawingView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
@@ -36,9 +36,7 @@ public class DrawingView extends View {
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
         canvasPaint = new Paint(Paint.DITHER_FLAG);
-
         brushSize = getResources().getInteger(R.integer.medium_size);
-        lastBrushSize = brushSize;
         drawPaint.setStrokeWidth(brushSize);
     }
 
@@ -88,14 +86,6 @@ public class DrawingView extends View {
         float pixelAmount = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, newSize, getResources().getDisplayMetrics());
         brushSize = pixelAmount;
         drawPaint.setStrokeWidth(brushSize);
-    }
-
-    public void setLastBrushSize(float lastSize) {
-        lastBrushSize=lastSize;
-    }
-
-    public float getLastBrushSize() {
-        return lastBrushSize;
     }
 
     public void startNew(){
